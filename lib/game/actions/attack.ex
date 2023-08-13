@@ -3,7 +3,7 @@ defmodule ExMon.Game.Actions.Attack do
   alias ExMon.Game.Status
 
   @move_avg_power 18..25
-  @move_rnd_power  10..25
+  @move_rnd_power 10..25
 
   def attack_opponent(opponent, move) do
     damage = calculate_power(move)
