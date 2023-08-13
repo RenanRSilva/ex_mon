@@ -1,21 +1,41 @@
 # ExMon
 
-**TODO: Add description**
+**ExMon, iex turn game**
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `ex_mon` to your list of dependencies in `mix.exs`:
-
 ```elixir
-def deps do
-  [
-    {:ex_mon, "~> 0.1.0"}
-  ]
-end
+mix deps.get
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/ex_mon](https://hexdocs.pm/ex_mon).
+### Start iex shell
 
+```elixir
+iex -S mix
+```
+
+### Create a player
+
+```elixir
+player = ExMon.create_player("Player", :kick, :punch, :heal)
+```
+
+### Start game
+
+```elixir
+ExMon.start_game(player)
+```
+
+### Make move
+
+```elixir
+ExMon.make_move(:kick)
+```
+
+```elixir
+ExMon.make_move(:heal)
+```
+
+```elixir
+ExMon.make_move(:punch)
+```
